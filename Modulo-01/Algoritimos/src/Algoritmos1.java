@@ -6,6 +6,6 @@ public class Algoritmos1 {
         int retangulo_B = 5;
 
         System.out.println("Resultado = " + (retangulo_A + retangulo_B));
-        
+
     }
 }
