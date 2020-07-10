@@ -4,10 +4,10 @@ public class Resto {
 
     public static void main(String[] args){
 
-        int numero1 = 10;
-        int numero2= 2;
+        double numero1 = 9;
+        double numero2= 2;
 
-        int resto = numero1 % numero2;
+        double resto = numero1 % numero2;
 
         System.out.println(resto);
 
