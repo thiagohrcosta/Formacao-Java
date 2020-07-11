@@ -6,7 +6,10 @@ public class AlunoExecutavel {
 
     public static void main(String[] args){
 
+        // New Aluno() é uma instância (Criação de objeto);
+
         Aluno aluno1 = new Aluno("Maria");
+
 
         System.out.println(aluno1.getNome());
 
