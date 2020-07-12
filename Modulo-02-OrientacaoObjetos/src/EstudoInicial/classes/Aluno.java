@@ -118,5 +118,20 @@ public class Aluno {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + getNome() + '\'' +
+                ", idade=" + getIdade() +
+                ", dataNascimento='" + getDataNascimento() + '\'' +
+                ", registroGeral='" + getRegistroGeral() + '\'' +
+                ", numeroCpf='" + getNumeroCpf() + '\'' +
+                ", nomeMae='" + getNomeMae() + '\'' +
+                ", nota1=" + getNota1() +
+                ", nota2=" + getNota2() +
+                ", nota3=" + getNota3() +
+                '}';
+    }
 }
 
