@@ -2,6 +2,8 @@ package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
 
+import javax.swing.*;
+
 public class AlunoExecutavel {
 
     public static void main(String[] args){
@@ -15,6 +17,13 @@ public class AlunoExecutavel {
 
         System.out.println(aluno1.getNome());
         System.out.println("A nota média do aluno é : " + aluno1.getMediaNota());
+
+        if(aluno1.getAlunoAprovado() == true){
+            JOptionPane.showMessageDialog(null, "Aluno Aprovado.");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Aluno Reprovado");
+        }
 
         Aluno aluno2 = new Aluno("Joao", 30);
 
