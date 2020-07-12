@@ -1,6 +1,7 @@
 package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
+import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 
@@ -10,31 +11,47 @@ public class AlunoExecutavel {
 
         // New Aluno() é uma instância (Criação de objeto);
 
-        Aluno aluno1 = new Aluno("Maria");
-        aluno1.setNota1(90);
-        aluno1.setNota2(80.8);
-        aluno1.setNota3(74);
 
-        System.out.println(aluno1.getNome());
-        System.out.println("A nota média do aluno é : " + aluno1.getMediaNota());
+        String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+        String idade = JOptionPane.showInputDialog("Qual a idade?");
+        String dataNascimentoAluno = JOptionPane.showInputDialog("Qual a data de nascimento?");
+        String registroGeralAluno = JOptionPane.showInputDialog("Qual o Registro geral?");
+        String cpfAluno = JOptionPane.showInputDialog("Qual o CPF do aluno?");
+        String nomeMaeAluno = JOptionPane.showInputDialog("Qual o nome da mãe");
 
-        if(aluno1.getAlunoAprovado() == true){
-            JOptionPane.showMessageDialog(null, "Aluno Aprovado.");
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Aluno Reprovado");
-        }
+        // Notas do Aluno
+        String nota1Aluno = JOptionPane.showInputDialog("Nota 1: ");
+        String nota2Aluno = JOptionPane.showInputDialog("Nota 2: ");
+        String nota3Aluno = JOptionPane.showInputDialog("Nota 3: ");
 
-        Aluno aluno2 = new Aluno("Joao", 30);
+        Aluno aluno1 = new Aluno();
 
-        System.out.println(aluno2.getNome());
+        //Definindo nome do aluno
+        aluno1.setNome(nome);
 
-        Aluno aluno3 = new Aluno();
-        aluno3.setNome("Jose");
-        aluno3.setIdade(44);
-        aluno3.setDataNascimento("20.01");
+        // Convertendo a idade para INT
+        aluno1.setIdade(Integer.valueOf(idade));
 
-        System.out.println(aluno3.getNome() + " " + aluno3.getIdade());
+        // Definindo data de nascimento
+        aluno1.setDataNascimento(dataNascimentoAluno);
+
+        // Definindo o RG
+        aluno1.setRegistroGeral(registroGeralAluno);
+
+        // Definindo CPF
+        aluno1.setNumeroCpf(cpfAluno);
+
+        // Definindo nome da mãe
+        aluno1.setNomeMae(nomeMaeAluno);
+
+        // Definindo as notas do Aluno
+        aluno1.setNota1(Double.parseDouble(nota1Aluno));
+        aluno1.setNota2(Double.parseDouble(nota2Aluno));
+        aluno1.setNota3(Double.parseDouble(nota3Aluno));
+
+
+
+
 
     }
 }
