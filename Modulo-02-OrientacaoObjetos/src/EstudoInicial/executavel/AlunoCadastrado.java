@@ -52,6 +52,10 @@ public class AlunoCadastrado {
         aluno1.setNota2(Double.parseDouble(nota2Aluno));
         aluno1.setDisciplina3(disciplina3);
         aluno1.setNota3(Double.parseDouble(nota3Aluno));
+
+        System.out.println(aluno1);
+        System.out.println("Média do aluno : " + aluno1.getMediaNota());
+        System.out.println("Resultado : " + aluno1.getAlunoAprovado());
     }
 
 
