@@ -15,8 +15,11 @@ public class Aluno {
     String nomeMae;
 
     private double nota1;
+    private String disciplina1;
     private double nota2;
+    private String disciplina2;
     private double nota3;
+    private String Disciplina3;
 
     public Aluno(){
 
@@ -104,6 +107,30 @@ public class Aluno {
         this.nota3 = nota3;
     }
 
+    public String getDisciplina1() {
+        return disciplina1;
+    }
+
+    public void setDisciplina1(String disciplina1) {
+        this.disciplina1 = disciplina1;
+    }
+
+    public String getDisciplina2() {
+        return disciplina2;
+    }
+
+    public void setDisciplina2(String disciplina2) {
+        this.disciplina2 = disciplina2;
+    }
+
+    public String getDisciplina3() {
+        return Disciplina3;
+    }
+
+    public void setDisciplina3(String disciplina3) {
+        Disciplina3 = disciplina3;
+    }
+
     /* Método que retorna a média do aluno */
 
     public double getMediaNota(){
@@ -123,15 +150,18 @@ public class Aluno {
     @Override
     public String toString() {
         return "Aluno{" +
-                "nome='" + getNome() + '\'' +
-                ", idade=" + getIdade() +
-                ", dataNascimento='" + getDataNascimento() + '\'' +
-                ", registroGeral='" + getRegistroGeral() + '\'' +
-                ", numeroCpf='" + getNumeroCpf() + '\'' +
-                ", nomeMae='" + getNomeMae() + '\'' +
-                ", nota1=" + getNota1() +
-                ", nota2=" + getNota2() +
-                ", nota3=" + getNota3() +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", numeroCpf='" + numeroCpf + '\'' +
+                ", nomeMae='" + nomeMae + '\'' +
+                ", nota1=" + nota1 +
+                ", disciplina1='" + disciplina1 + '\'' +
+                ", nota2=" + nota2 +
+                ", disciplina2='" + disciplina2 + '\'' +
+                ", nota3=" + nota3 +
+                ", Disciplina3='" + Disciplina3 + '\'' +
                 '}';
     }
 
