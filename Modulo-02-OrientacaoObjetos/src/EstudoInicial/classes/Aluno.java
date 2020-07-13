@@ -14,6 +14,16 @@ public class Aluno {
     String numeroCpf;
     String nomeMae;
 
+    private Disciplinas disciplinas = new Disciplinas();
+
+    public void setDisciplinas(Disciplinas disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    public Disciplinas getDisciplinas() {
+        return disciplinas;
+    }
+
     public Aluno(){
 
     }
@@ -75,6 +85,11 @@ public class Aluno {
         this.nomeMae = nomeMae;
     }
 
+    public double getMediaNota(){
+        return (disciplinas.getNota1()
+                + disciplinas.getNota2()
+                + disciplinas.getNota3()) / 3;
+    }
     public boolean getAlunoAprovado(){
         double media = this.getMediaNota();
         if(media >= 7){
