@@ -60,6 +60,18 @@ public class Disciplinas {
     }
 
     @Override
+    public String toString() {
+        return "Disciplinas{" +
+                "nota1=" + nota1 +
+                ", disciplina1='" + disciplina1 + '\'' +
+                ", nota2=" + nota2 +
+                ", disciplina2='" + disciplina2 + '\'' +
+                ", nota3=" + nota3 +
+                ", Disciplina3='" + Disciplina3 + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

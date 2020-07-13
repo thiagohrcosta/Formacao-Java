@@ -45,9 +45,7 @@ public class AlunoExecutavel {
         aluno1.setNomeMae(nomeMaeAluno);
 
         // Definindo as notas do Aluno
-        aluno1.setNota1(Double.parseDouble(nota1Aluno));
-        aluno1.setNota2(Double.parseDouble(nota2Aluno));
-        aluno1.setNota3(Double.parseDouble(nota3Aluno));
+
 
 
 

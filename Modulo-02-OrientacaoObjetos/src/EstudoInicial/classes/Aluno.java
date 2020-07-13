@@ -100,7 +100,19 @@ public class Aluno {
         }
     }
 
-    // Equals hashCode
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", numeroCpf='" + numeroCpf + '\'' +
+                ", nomeMae='" + nomeMae + '\'' +
+                ", disciplinas=" + disciplinas +
+                '}';
+    }
+// Equals hashCode
 
 
     @Override

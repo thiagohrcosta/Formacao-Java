@@ -46,12 +46,13 @@ public class AlunoCadastrado {
         aluno1.setNomeMae(nomeMaeAluno);
 
         // Definindo as notas do Aluno
-        aluno1.setDisciplina1(disciplina1);
-        aluno1.setNota1(Double.parseDouble(nota1Aluno));
-        aluno1.setDisciplina2(disciplina2);
-        aluno1.setNota2(Double.parseDouble(nota2Aluno));
-        aluno1.setDisciplina3(disciplina3);
-        aluno1.setNota3(Double.parseDouble(nota3Aluno));
+        aluno1.getDisciplinas().setNota1(Double.parseDouble(nota1Aluno));
+        aluno1.getDisciplinas().setNota2(Double.parseDouble(nota2Aluno));
+        aluno1.getDisciplinas().setNota3(Double.parseDouble(nota3Aluno));
+
+        aluno1.getDisciplinas().setDisciplina1(disciplina1);
+        aluno1.getDisciplinas().setDisciplina2(disciplina2);
+        aluno1.getDisciplinas().setDisciplina3(disciplina3);
 
         System.out.println(aluno1);
         System.out.println("Média do aluno : " + aluno1.getMediaNota());
