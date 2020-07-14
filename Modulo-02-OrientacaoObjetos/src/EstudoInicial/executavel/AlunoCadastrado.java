@@ -1,6 +1,7 @@
 package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
+import EstudoInicial.classes.Disciplinas;
 
 import javax.swing.*;
 
@@ -45,14 +46,24 @@ public class AlunoCadastrado {
         // Definindo nome da mãe
         aluno1.setNomeMae(nomeMaeAluno);
 
-        // Definindo as notas do Aluno
-        aluno1.getDisciplinas().setNota1(Double.parseDouble(nota1Aluno));
-        aluno1.getDisciplinas().setNota2(Double.parseDouble(nota2Aluno));
-        aluno1.getDisciplinas().setNota3(Double.parseDouble(nota3Aluno));
+        // Instanciando disciplinas e adicionando na lista
+        Disciplinas disciplinas1 = new Disciplinas();
+        disciplinas1.setDisciplina("Banco de Dados");
+        disciplinas1.setNota(9);
 
-        aluno1.getDisciplinas().setDisciplina1(disciplina1);
-        aluno1.getDisciplinas().setDisciplina2(disciplina2);
-        aluno1.getDisciplinas().setDisciplina3(disciplina3);
+        aluno1.getDisciplinas().add(disciplinas1);
+
+        Disciplinas disciplinas2 = new Disciplinas();
+        disciplinas2.setDisciplina("Desenvolvimento Java");
+        disciplinas2.setNota(10);
+
+        aluno1.getDisciplinas().add(disciplinas2);
+
+        Disciplinas disciplinas3 = new Disciplinas();
+        disciplinas3.setDisciplina("Programação com React");
+        disciplinas3.setNota(10);
+
+        aluno1.getDisciplinas().add(disciplinas3);
 
         System.out.println(aluno1);
         System.out.println("Média do aluno : " + aluno1.getMediaNota());
