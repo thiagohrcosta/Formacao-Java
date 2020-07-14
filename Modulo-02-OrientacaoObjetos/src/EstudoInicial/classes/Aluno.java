@@ -1,6 +1,8 @@
 package EstudoInicial.classes;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
@@ -14,15 +16,7 @@ public class Aluno {
     String numeroCpf;
     String nomeMae;
 
-    private Disciplinas disciplinas = new Disciplinas();
-
-    public void setDisciplinas(Disciplinas disciplinas) {
-        this.disciplinas = disciplinas;
-    }
-
-    public Disciplinas getDisciplinas() {
-        return disciplinas;
-    }
+    private List<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
 
     public Aluno(){
 
@@ -35,6 +29,14 @@ public class Aluno {
     public Aluno(String nomePadrao, int idadePadrao){
         nome = nomePadrao;
         idade = idadePadrao;
+    }
+
+    public void setDisciplinas(List<Disciplinas> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    public List<Disciplinas> getDisciplinas() {
+        return disciplinas;
     }
 
     public String getNome() {
@@ -86,9 +88,7 @@ public class Aluno {
     }
 
     public double getMediaNota(){
-        return (disciplinas.getNota1()
-                + disciplinas.getNota2()
-                + disciplinas.getNota3()) / 3;
+        return 0;
     }
     public boolean getAlunoAprovado(){
         double media = this.getMediaNota();
@@ -109,7 +109,6 @@ public class Aluno {
                 ", registroGeral='" + registroGeral + '\'' +
                 ", numeroCpf='" + numeroCpf + '\'' +
                 ", nomeMae='" + nomeMae + '\'' +
-                ", disciplinas=" + disciplinas +
                 '}';
     }
 // Equals hashCode
