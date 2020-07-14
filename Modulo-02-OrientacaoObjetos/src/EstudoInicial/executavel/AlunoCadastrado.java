@@ -16,16 +16,6 @@ public class AlunoCadastrado {
         String cpfAluno = JOptionPane.showInputDialog("Qual o CPF do aluno?");
         String nomeMaeAluno = JOptionPane.showInputDialog("Qual o nome da mãe");
 
-        // Notas do Aluno
-        String disciplina1 = JOptionPane.showInputDialog("Disciplina 1: Nome?");
-        String nota1Aluno = JOptionPane.showInputDialog("Nota 1: ");
-
-        String disciplina2 = JOptionPane.showInputDialog("Disciplina 2: Nome?");
-        String nota2Aluno = JOptionPane.showInputDialog("Nota 2: ");
-
-        String disciplina3 = JOptionPane.showInputDialog("Disciplina 3: Nome?");
-        String nota3Aluno = JOptionPane.showInputDialog("Nota 3: ");
-
         Aluno aluno1 = new Aluno();
 
         //Definindo nome do aluno

@@ -88,7 +88,13 @@ public class Aluno {
     }
 
     public double getMediaNota(){
-        return 0;
+
+        double somaNotas = 0.0;
+
+        for(Disciplinas disciplinas : disciplinas){
+            somaNotas += disciplinas.getNota();
+        }
+        return somaNotas / disciplinas.size();
     }
     public boolean getAlunoAprovado(){
         double media = this.getMediaNota();
