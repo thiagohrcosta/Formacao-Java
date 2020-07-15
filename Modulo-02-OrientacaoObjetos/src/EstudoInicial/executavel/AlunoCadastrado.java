@@ -18,42 +18,29 @@ public class AlunoCadastrado {
 
         Aluno aluno1 = new Aluno();
 
-        //Definindo nome do aluno
         aluno1.setNome(nome);
-
-        // Convertendo a idade para INT
         aluno1.setIdade(Integer.valueOf(idade));
-
-        // Definindo data de nascimento
         aluno1.setDataNascimento(dataNascimentoAluno);
-
-        // Definindo o RG
         aluno1.setRegistroGeral(registroGeralAluno);
-
-        // Definindo CPF
         aluno1.setNumeroCpf(cpfAluno);
-
-        // Definindo nome da mãe
         aluno1.setNomeMae(nomeMaeAluno);
 
-        // Instanciando disciplinas e adicionando na lista
-        Disciplinas disciplinas1 = new Disciplinas();
-        disciplinas1.setDisciplina("Banco de Dados");
-        disciplinas1.setNota(9);
+        String materias = JOptionPane.showInputDialog("Digite o número de matérias para cadastrar: ");
+        Double qtdMaterias = Double.valueOf(materias);
 
-        aluno1.getDisciplinas().add(disciplinas1);
+        for (int pos = 1; pos <= qtdMaterias; pos++){
+            String nomeDisciplina = JOptionPane.showInputDialog("Digite o nome da disciplina " + pos + " : ");
+            String notaDisciplina = JOptionPane.showInputDialog("Digite a nota da disciplina " + pos + " : ");
+            Disciplinas disciplinas = new Disciplinas();
 
-        Disciplinas disciplinas2 = new Disciplinas();
-        disciplinas2.setDisciplina("Desenvolvimento Java");
-        disciplinas2.setNota(10);
+            disciplinas.setDisciplina(nomeDisciplina);
+            disciplinas.setNota(Double.valueOf(notaDisciplina));
 
-        aluno1.getDisciplinas().add(disciplinas2);
+            aluno1.getDisciplinas().add(disciplinas);
 
-        Disciplinas disciplinas3 = new Disciplinas();
-        disciplinas3.setDisciplina("Programação com React");
-        disciplinas3.setNota(10);
+        }
 
-        aluno1.getDisciplinas().add(disciplinas3);
+
 
         System.out.println(aluno1);
         System.out.println("Média do aluno : " + aluno1.getMediaNota());
