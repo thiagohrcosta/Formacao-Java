@@ -40,6 +40,17 @@ public class AlunoCadastrado {
 
         }
 
+        int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+        if(escolha == 0){
+            String disciplinaRemover = JOptionPane.showInputDialog("Quando a disciplina a ser removida ?" );
+            aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover));
+        }
+        
+        
+
+
+        
+
 
 
         System.out.println(aluno1);
