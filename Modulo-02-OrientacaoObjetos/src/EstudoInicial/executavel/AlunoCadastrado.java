@@ -99,6 +99,8 @@ public class AlunoCadastrado {
                 disciplina.setNota(10);
 
                 trocar.getDisciplinas().add(disciplina);
+
+                alunos.set(pos, trocar);
             }
         }
         
