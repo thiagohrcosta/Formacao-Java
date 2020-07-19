@@ -72,7 +72,20 @@ public class AlunoCadastrado {
                 System.out.println("----------------------------------------------");
                 break;
             }
+        }
 
+        for(Aluno aluno:alunos){
+
+            if(aluno.getNome().equalsIgnoreCase("Joao")){
+                alunos.remove(aluno);
+                break;
+            }
+            else{
+                System.out.println("Aluno : " + aluno.getNome());
+                System.out.println("Média do aluno : " + aluno.getMediaNota());
+                System.out.println("Resultado : " + aluno.getAlunoAprovado2());
+                System.out.println("----------------------------------------------");
+            }
         }
 
     }
