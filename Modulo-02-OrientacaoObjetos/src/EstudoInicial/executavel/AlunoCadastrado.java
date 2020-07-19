@@ -64,10 +64,15 @@ public class AlunoCadastrado {
         }
 
         for (Aluno aluno: alunos) {
-            System.out.println(aluno);
-            System.out.println("Média do aluno : " + aluno.getMediaNota());
-            System.out.println("Resultado : " + aluno.getAlunoAprovado2());
-            System.out.println("----------------------------------------------");
+
+            if(aluno.getNome().equalsIgnoreCase("Thiago")){
+                System.out.println(aluno);
+                System.out.println("Média do aluno : " + aluno.getMediaNota());
+                System.out.println("Resultado : " + aluno.getAlunoAprovado2());
+                System.out.println("----------------------------------------------");
+                break;
+            }
+
         }
 
     }
