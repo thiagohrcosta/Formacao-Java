@@ -1,5 +1,7 @@
 package EstudoInicial.classes;
 
+import constantes.StatusAluno;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -110,14 +112,14 @@ public class Aluno {
         double media = this.getMediaNota();
         if(media >= 5){
             if(media >= 7){
-                return "Aluno está aprovado";
+                return StatusAluno.APROVADO;
             }
             else{
-                return "Aluno está de recuperação";
+                return StatusAluno.RECUPERACAO;
             }
         }
         else{
-            return "Aluno está reprovado";
+            return StatusAluno.REPROVADO;
         }
     }
 
