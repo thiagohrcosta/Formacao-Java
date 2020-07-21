@@ -2,6 +2,7 @@ package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
 import EstudoInicial.classes.Disciplinas;
+import constantes.StatusAluno;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -12,8 +13,11 @@ public class AlunoCadastrado {
     public static void main(String[] args){
 
         List<Aluno> alunos = new ArrayList<Aluno>();
+        List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+        List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
+        List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 
-        for(int qtd = 1; qtd <= 2; qtd++){
+        for(int qtd = 1; qtd <= 5; qtd++){
 
             String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
             String idade = JOptionPane.showInputDialog("Qual a idade?");
@@ -58,52 +62,38 @@ public class AlunoCadastrado {
                 }
 
             }
-
             alunos.add(aluno1);
-
         }
 
-        for (Aluno aluno: alunos) {
-
-            if(aluno.getNome().equalsIgnoreCase("Thiago")){
-                System.out.println(aluno);
-                System.out.println("Média do aluno : " + aluno.getMediaNota());
-                System.out.println("Resultado : " + aluno.getAlunoAprovado2());
-                System.out.println("----------------------------------------------");
-                break;
+        for(Aluno aluno: alunos){
+            if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)){
+                alunosAprovados.add(aluno);
             }
-        }
-
-        for(Aluno aluno:alunos){
-
-            if(aluno.getNome().equalsIgnoreCase("Joao")){
-                alunos.remove(aluno);
-                break;
+            else if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)){
+                    alunosRecuperacao.add(aluno);
             }
             else{
-                System.out.println("Aluno : " + aluno.getNome());
-                System.out.println("Média do aluno : " + aluno.getMediaNota());
-                System.out.println("Resultado : " + aluno.getAlunoAprovado2());
-                System.out.println("----------------------------------------------");
+                alunosReprovados.add(aluno);  /*  Alunos reprovados StatusAluno.Reprovado) */
             }
         }
 
-        for (int pos = 0; pos < alunos.size(); pos++){
-            Aluno aluno = alunos.get(pos);
-            if(aluno.getNome().equalsIgnoreCase("Jose")){
-                Aluno trocar = new Aluno();
-                trocar.setNome("Aluno alterado.");
-
-                Disciplinas disciplina = new Disciplinas();
-                disciplina.setDisciplina("Big Data");
-                disciplina.setNota(10);
-
-                trocar.getDisciplinas().add(disciplina);
-
-                alunos.set(pos, trocar);
-            }
+        System.out.println("----------------------- Lista dos aprovados -----------------------");
+        for(Aluno aluno: alunosAprovados){
+            System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
         }
-        
+
+        System.out.println("----------------------- Lista dos reprovados -----------------------");
+        for(Aluno aluno: alunosReprovados){
+            System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
+        }
+
+        System.out.println("----------------------- Lista dos em recuperação -----------------------");
+        for(Aluno aluno: alunosRecuperacao){
+            System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
+        }
+
+
+
 
     }
 
