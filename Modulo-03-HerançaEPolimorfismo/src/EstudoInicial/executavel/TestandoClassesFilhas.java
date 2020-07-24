@@ -19,5 +19,9 @@ public class TestandoClassesFilhas {
         secretario1.setNome("João da Silva");
         secretario1.setExperiencia("Administração");
 
+        System.out.println(aluno1);
+        System.out.println(diretor);
+        System.out.println(secretario1);
+
     }
 }
