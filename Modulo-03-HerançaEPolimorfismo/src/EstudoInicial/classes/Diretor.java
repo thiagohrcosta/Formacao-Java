@@ -29,4 +29,6 @@ public class Diretor extends Pessoa {
     public void setTitulacao(String titulacao) {
         this.titulacao = titulacao;
     }
+
+
 }
