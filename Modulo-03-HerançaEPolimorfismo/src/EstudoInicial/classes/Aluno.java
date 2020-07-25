@@ -147,8 +147,10 @@ public class Aluno extends Pessoa{
 
     @Override /* Identifica método sobrescrito */
     public boolean pessoaMaiorIdade() {
-        System.out.println("Aluno é maior?");
-        return super.pessoaMaiorIdade();
+        return idade >= 21;
+    }
+    public String mensagemMaiorIdade21(){
+        return this.pessoaMaiorIdade() ? "Aluno maior de 21 anos" : "Aluno não pode se matricular";
     }
 }
 

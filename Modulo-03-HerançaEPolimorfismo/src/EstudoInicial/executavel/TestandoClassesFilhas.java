@@ -10,7 +10,7 @@ public class TestandoClassesFilhas {
 
         Aluno aluno1 = new Aluno();
         aluno1.setNome("Thiago - JDev");
-        aluno1.setIdade(17);
+        aluno1.setIdade(20);
 
         Diretor diretor = new Diretor();
         diretor.setNome("Bill Gates");
@@ -26,8 +26,7 @@ public class TestandoClassesFilhas {
         System.out.println(diretor);
         System.out.println(secretario1);
 
-        System.out.println(aluno1.pessoaMaiorIdade());
-
+        System.out.println(aluno1.pessoaMaiorIdade() + " - " + aluno1.mensagemMaiorIdade21());
 
     }
 }
