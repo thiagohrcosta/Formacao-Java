@@ -144,5 +144,11 @@ public class Aluno extends Pessoa{
     public int hashCode() {
         return Objects.hash(nome);
     }
+
+    @Override /* Identifica método sobrescrito */
+    public boolean pessoaMaiorIdade() {
+        System.out.println("Aluno é maior?");
+        return super.pessoaMaiorIdade();
+    }
 }
 
