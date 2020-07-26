@@ -2,12 +2,12 @@ package EstudoInicial.classes;
 
 public class Pessoa {
 
-    String nome;
-    int idade;
-    String dataNascimento;
-    String registroGeral;
-    String numeroCpf;
-    String nomeMae;
+    protected String nome;
+    protected int idade;
+    protected String dataNascimento;
+    protected String registroGeral;
+    protected String numeroCpf;
+    protected String nomeMae;
 
     public String getNome() {
         return nome;
