@@ -2,6 +2,7 @@ package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
 import EstudoInicial.classes.Diretor;
+import EstudoInicial.classes.Pessoa;
 import EstudoInicial.classes.Secretario;
 
 public class TestandoClassesFilhas {
@@ -27,6 +28,10 @@ public class TestandoClassesFilhas {
         System.out.println(secretario1);
 
         System.out.println(aluno1.pessoaMaiorIdade() + " - " + aluno1.mensagemMaiorIdade21());
+
+        Aluno aluno2 = new Aluno();
+        
+
 
     }
 }
