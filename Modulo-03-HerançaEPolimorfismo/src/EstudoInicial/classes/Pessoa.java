@@ -9,6 +9,7 @@ public abstract class Pessoa {
     protected String numeroCpf;
     protected String nomeMae;
 
+    /* Método abstrato é obrigatório para as classes filhas */
     public abstract double salario();
 
     public String getNome() {

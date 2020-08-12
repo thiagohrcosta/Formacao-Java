@@ -36,6 +36,11 @@ public class Aluno extends Pessoa{
         return disciplinas;
     }
 
+    @Override
+    public double salario() {
+        return 1500.90;
+    }
+
     public String getNome() {
         return nome;
     }
