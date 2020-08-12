@@ -30,8 +30,17 @@ public class TestandoClassesFilhas {
         System.out.println(aluno1.pessoaMaiorIdade() + " - " + aluno1.mensagemMaiorIdade21());
 
         Aluno aluno2 = new Aluno();
-        
 
+        System.out.println("Salário é = " + aluno1.salario());
 
+        Pessoa pessoa = new Aluno();
+
+        teste(aluno1);
+        teste(diretor);
+        teste(secretario1);
+    }
+
+    public static void teste(Pessoa pessoa){
+        System.out.println("Essa pessoa se chama " + pessoa.getNome() + " e o salário");
     }
 }
