@@ -2,6 +2,7 @@ package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
 import EstudoInicial.classes.Disciplinas;
+import EstudoInicial.classes.Secretario;
 import constantes.StatusAluno;
 
 import javax.swing.*;
@@ -16,8 +17,11 @@ public class AlunoCadastrado {
         String login = JOptionPane.showInputDialog("Informe o login:");
         String senha = JOptionPane.showInputDialog("Informe a senha:");
 
-        if (login.equalsIgnoreCase("admin")
-                && senha.equalsIgnoreCase("admin")){
+        Secretario secretario = new Secretario();
+        secretario.setLogin(login);
+        secretario.setSenha(senha);
+
+        if (secretario.autenticar()){
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
