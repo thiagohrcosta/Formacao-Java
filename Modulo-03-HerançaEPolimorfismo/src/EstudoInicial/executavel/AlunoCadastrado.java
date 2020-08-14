@@ -3,6 +3,7 @@ package EstudoInicial.executavel;
 import EstudoInicial.classes.Aluno;
 import EstudoInicial.classes.Disciplinas;
 import EstudoInicial.classes.Secretario;
+import EstudoInicial.interfaces.PermitirAcesso;
 import constantes.StatusAluno;
 
 import javax.swing.*;
@@ -17,11 +18,12 @@ public class AlunoCadastrado {
         String login = JOptionPane.showInputDialog("Informe o login:");
         String senha = JOptionPane.showInputDialog("Informe a senha:");
 
-        Secretario secretario = new Secretario();
-        secretario.setLogin(login);
-        secretario.setSenha(senha);
+        PermitirAcesso permitirAcesso = new Secretario(login, senha);
 
-        if (secretario.autenticar(login, senha)){
+
+        Secretario secretario = new Secretario();
+
+        if (new Secretario().autenticar(login, senha)){
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
