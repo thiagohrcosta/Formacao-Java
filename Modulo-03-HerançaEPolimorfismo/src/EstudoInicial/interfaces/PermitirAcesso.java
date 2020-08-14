@@ -4,8 +4,9 @@ package EstudoInicial.interfaces;
 
 public interface PermitirAcesso {
 
-    /* Apenas declaração do método */
-    public boolean autenticar();
+    public boolean autenticar(String login, String senha);
+
+
 
 
 }

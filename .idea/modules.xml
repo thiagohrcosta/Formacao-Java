@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Formacao-Java.iml" filepath="$PROJECT_DIR$/.idea/Formacao-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modulo-01/Modulo-01.iml" filepath="$PROJECT_DIR$/Modulo-01/Modulo-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modulo-02-OrientacaoObjetos/Modulo-02-OrientacaoObjetos.iml" filepath="$PROJECT_DIR$/Modulo-02-OrientacaoObjetos/Modulo-02-OrientacaoObjetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modulo-03-HerançaEPolimorfismo/Modulo-03-HerançaEPolimorfismo.iml" filepath="$PROJECT_DIR$/Modulo-03-HerançaEPolimorfismo/Modulo-03-HerançaEPolimorfismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjetoAplicado-01/ProjetoAplicado-01.iml" filepath="$PROJECT_DIR$/ProjetoAplicado-01/ProjetoAplicado-01.iml" />
+    </modules>
+  </component>
+</project>

@@ -21,7 +21,7 @@ public class AlunoCadastrado {
         secretario.setLogin(login);
         secretario.setSenha(senha);
 
-        if (secretario.autenticar()){
+        if (secretario.autenticar(login, senha)){
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
