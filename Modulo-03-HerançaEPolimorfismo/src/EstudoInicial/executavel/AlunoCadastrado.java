@@ -4,6 +4,7 @@ import EstudoInicial.classes.Aluno;
 import EstudoInicial.classes.Disciplinas;
 import EstudoInicial.classes.Secretario;
 import EstudoInicial.interfaces.PermitirAcesso;
+import classesAuxiliares.FuncaoAutenticacao;
 import constantes.StatusAluno;
 
 import javax.swing.*;
@@ -23,7 +24,7 @@ public class AlunoCadastrado {
 
         Secretario secretario = new Secretario();
 
-        if (new Secretario().autenticar(login, senha)){
+        if (new FuncaoAutenticacao(permitirAcesso).autenticar()){ /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
