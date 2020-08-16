@@ -1,6 +1,7 @@
 package EstudoInicial.executavel;
 
 import EstudoInicial.classes.Aluno;
+import EstudoInicial.classes.Diretor;
 import EstudoInicial.classes.Disciplinas;
 import EstudoInicial.classes.Secretario;
 import EstudoInicial.interfaces.PermitirAcesso;
@@ -19,12 +20,7 @@ public class AlunoCadastrado {
         String login = JOptionPane.showInputDialog("Informe o login:");
         String senha = JOptionPane.showInputDialog("Informe a senha:");
 
-        PermitirAcesso permitirAcesso = new Secretario(login, senha);
-
-
-        Secretario secretario = new Secretario();
-
-        if (new FuncaoAutenticacao(permitirAcesso).autenticar()){ /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
+        if (new FuncaoAutenticacao(new Diretor(login, senha).autenticar()){ /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -37,7 +33,7 @@ public class AlunoCadastrado {
             List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
             List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 
-            for(int qtd = 1; qtd <= 5; qtd++){
+            for(int qtd = 1; qtd <= 3; qtd++){
 
                 String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
                 String idade = JOptionPane.showInputDialog("Qual a idade?");
