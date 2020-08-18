@@ -20,7 +20,7 @@ public class AlunoCadastrado {
         String login = JOptionPane.showInputDialog("Informe o login:");
         String senha = JOptionPane.showInputDialog("Informe a senha:");
 
-        if (new FuncaoAutenticacao(new Diretor(login, senha).autenticar()){ /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
+        if (new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) { /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -33,7 +33,7 @@ public class AlunoCadastrado {
             List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
             List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 
-            for(int qtd = 1; qtd <= 3; qtd++){
+            for (int qtd = 1; qtd <= 3; qtd++){
 
                 String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
                 String idade = JOptionPane.showInputDialog("Qual a idade?");
