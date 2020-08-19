@@ -22,7 +22,7 @@ public class AlunoCadastrado {
 
         if (new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) { /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
 
-            List<Aluno> alunos = null;
+            List<Aluno> alunos = new ArrayList<Aluno>();
 
             // HASHMAP é uma lista que dentro dela há uma chave que identifica
             // Uma sequência de valores
