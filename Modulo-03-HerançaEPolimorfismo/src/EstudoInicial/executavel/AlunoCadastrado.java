@@ -22,7 +22,7 @@ public class AlunoCadastrado {
 
         if (new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) { /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
 
-            List<Aluno> alunos = new ArrayList<Aluno>();
+            List<Aluno> alunos = null;
 
             // HASHMAP é uma lista que dentro dela há uma chave que identifica
             // Uma sequência de valores
@@ -33,7 +33,7 @@ public class AlunoCadastrado {
             List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
             List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 
-            for (int qtd = 1; qtd <= 3; qtd++){
+            for (int qtd = 1; qtd <= 2; qtd++){
 
                 String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
                 String idade = JOptionPane.showInputDialog("Qual a idade?");
