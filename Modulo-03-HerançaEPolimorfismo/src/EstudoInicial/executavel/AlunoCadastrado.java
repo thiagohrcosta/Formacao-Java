@@ -118,6 +118,16 @@ public class AlunoCadastrado {
 
         } catch (Exception e) {
             e.printStackTrace(); /* Imprime erro no console Java */
+
+            /* Mensagem do erro ou sua causa */
+            System.out.println("Mensagem: " + e.getMessage());
+
+            for(int i = 0; i <= e.getStackTrace().length; i++){
+                System.out.println("Classe de erro : " + e.getStackTrace()[i].getClassName());
+                System.out.println("Método de erro : " + e.getStackTrace()[i].getMethodName());
+                System.out.println("Linha de erro : " + e.getStackTrace()[i].getLineNumber());
+            }
+
             JOptionPane.showMessageDialog(null, "Erro ao processar notas");
         }
     }
