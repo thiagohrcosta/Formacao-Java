@@ -117,18 +117,23 @@ public class AlunoCadastrado {
 
 
         } catch (Exception e) {
+
+            StringBuilder saida = new StringBuilder();
+
             e.printStackTrace(); /* Imprime erro no console Java */
 
             /* Mensagem do erro ou sua causa */
             System.out.println("Mensagem: " + e.getMessage());
 
-            for(int i = 0; i <= e.getStackTrace().length; i++){
-                System.out.println("Classe de erro : " + e.getStackTrace()[i].getClassName());
-                System.out.println("Método de erro : " + e.getStackTrace()[i].getMethodName());
-                System.out.println("Linha de erro : " + e.getStackTrace()[i].getLineNumber());
+            for(int i = 0; i < e.getStackTrace().length; i++){
+              saida.append("\n Classe de erro : " + e.getStackTrace()[i].getClassName());
+              saida.append("\n Método de erro : " + e.getStackTrace()[i].getMethodName());
+              saida.append("\n Linha de erro : " + e.getStackTrace()[i].getLineNumber());
             }
 
-            JOptionPane.showMessageDialog(null, "Erro ao processar notas");
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Erro ao processar notas" + saida.toString());
         }
     }
 
