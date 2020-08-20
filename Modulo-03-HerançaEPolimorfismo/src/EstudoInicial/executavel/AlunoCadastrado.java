@@ -116,7 +116,7 @@ public class AlunoCadastrado {
             }
 
 
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
 
             StringBuilder saida = new StringBuilder();
 
@@ -129,11 +129,17 @@ public class AlunoCadastrado {
               saida.append("\n Classe de erro : " + e.getStackTrace()[i].getClassName());
               saida.append("\n Método de erro : " + e.getStackTrace()[i].getMethodName());
               saida.append("\n Linha de erro : " + e.getStackTrace()[i].getLineNumber());
+
             }
 
             JOptionPane.showMessageDialog(
                     null,
-                    "Erro ao processar notas" + saida.toString());
+                    "Erro de conversão de número" + saida.toString());
+        }
+        catch(NullPointerException e){
+            JOptionPane.showMessageDialog(
+                    null,
+                    "ERRO: Null pointer exception!!! " + e.getClass());
         }
     }
 
