@@ -22,8 +22,8 @@ public class AlunoCadastrado {
 
         try {
 
-            File file = new File("lines.txt");
-            Scanner scanner = new Scanner(file);
+            //File file = new File("lines.txt");
+            //Scanner scanner = new Scanner(file);
 
             String login = JOptionPane.showInputDialog("Informe o login:");
             String senha = JOptionPane.showInputDialog("Informe a senha:");
@@ -147,8 +147,12 @@ public class AlunoCadastrado {
             JOptionPane.showMessageDialog(
                     null,
                     "ERRO: Null pointer exception!!! " + e.getClass());
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Erro inesperado : " + e.getClass().getName()
+            );
         }
     }
 
