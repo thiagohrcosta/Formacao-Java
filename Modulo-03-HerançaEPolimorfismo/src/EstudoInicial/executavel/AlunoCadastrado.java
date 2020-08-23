@@ -7,6 +7,7 @@ import EstudoInicial.classes.Secretario;
 import EstudoInicial.interfaces.PermitirAcesso;
 import classesAuxiliares.FuncaoAutenticacao;
 import constantes.StatusAluno;
+import excessao.ExcessaoProcessarNota;
 
 import javax.swing.*;
 import java.io.File;
@@ -22,8 +23,14 @@ public class AlunoCadastrado {
 
         try {
 
-            //File file = new File("lines.txt");
-            //Scanner scanner = new Scanner(file);
+            try{
+                File file = new File("lines.txt");
+                Scanner scanner = new Scanner(file);
+            }
+            catch(FileNotFoundException e){
+               throw new ExcessaoProcessarNota("Erro ao processar o arquivo de notas do aluno");
+            }
+
 
             String login = JOptionPane.showInputDialog("Informe o login:");
             String senha = JOptionPane.showInputDialog("Informe a senha:");
