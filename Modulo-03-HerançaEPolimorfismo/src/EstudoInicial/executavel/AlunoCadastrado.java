@@ -9,21 +9,28 @@ import classesAuxiliares.FuncaoAutenticacao;
 import constantes.StatusAluno;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 public class AlunoCadastrado {
 
     public static void main(String[] args) {
 
         try {
+
+            File file = new File("lines.txt");
+            Scanner scanner = new Scanner(file);
+
             String login = JOptionPane.showInputDialog("Informe o login:");
             String senha = JOptionPane.showInputDialog("Informe a senha:");
 
             if (new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) { /* Travar o contrato para autorizar somente quem tem o "contrato" legítimo" */
 
-                List<Aluno> alunos = null;
+                List<Aluno> alunos = new ArrayList<Aluno>();
 
                 // HASHMAP é uma lista que dentro dela há uma chave que identifica
                 // Uma sequência de valores
@@ -140,6 +147,8 @@ public class AlunoCadastrado {
             JOptionPane.showMessageDialog(
                     null,
                     "ERRO: Null pointer exception!!! " + e.getClass());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
