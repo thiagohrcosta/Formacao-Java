@@ -147,12 +147,18 @@ public class AlunoCadastrado {
             JOptionPane.showMessageDialog(
                     null,
                     "ERRO: Null pointer exception!!! " + e.getClass());
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(
                     null,
                     "Erro inesperado : " + e.getClass().getName()
             );
+        }
+        finally {
+            /* Sempre é executado ocorrendo erros ou não */
+            JOptionPane.showMessageDialog(null, "Testes realizados");
+
         }
     }
 
