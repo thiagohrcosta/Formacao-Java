@@ -106,17 +106,17 @@ public class AlunoCadastrado {
 
                 System.out.println("----------------------- Lista dos aprovados -----------------------");
                 for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
-                    System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
+                    System.out.println("Resultado = " +aluno.getNome() + " - " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
                 }
 
                 System.out.println("----------------------- Lista dos reprovados -----------------------");
                 for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
-                    System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
+                    System.out.println("Resultado = " +aluno.getNome() + " - " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
                 }
 
                 System.out.println("----------------------- Lista dos em recuperação -----------------------");
                 for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
-                    System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
+                    System.out.println("Resultado = " +aluno.getNome() + " - " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Senha ou login inválidos");
