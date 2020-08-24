@@ -23,14 +23,7 @@ public class AlunoCadastrado {
 
         try {
 
-            try{
-                File file = new File("lines.txt");
-                Scanner scanner = new Scanner(file);
-            }
-            catch(FileNotFoundException e){
-               throw new ExcessaoProcessarNota("Erro ao processar o arquivo de notas do aluno");
-            }
-
+            lerArquivo();
 
             String login = JOptionPane.showInputDialog("Informe o login:");
             String senha = JOptionPane.showInputDialog("Informe a senha:");
@@ -150,17 +143,10 @@ public class AlunoCadastrado {
                     null,
                     "Erro de conversão de número" + saida.toString());
         }
-        catch(NullPointerException e){
+        catch(Exception e){
             JOptionPane.showMessageDialog(
                     null,
-                    "ERRO: Null pointer exception!!! " + e.getClass());
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(
-                    null,
-                    "Erro inesperado : " + e.getClass().getName()
-            );
+                    "ERRO!!! " + e.getClass());
         }
         finally {
             /* Sempre é executado ocorrendo erros ou não */
@@ -169,6 +155,16 @@ public class AlunoCadastrado {
         }
     }
 
+    public static void lerArquivo() throws ExcessaoProcessarNota {
+        try{
+            File file = new File("lines.txt");
+            Scanner scanner = new Scanner(file);
+        }
+        catch (FileNotFoundException e){
+            throw new ExcessaoProcessarNota(e.getMessage());
+        }
 
+
+    }
 
 }
